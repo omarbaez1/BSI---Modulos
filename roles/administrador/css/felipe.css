@@ -1,0 +1,152 @@
+/* Reset básico para asegurar consistencia en navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuente y fondo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Azul muy claro para el fondo */
+    color: #333;
+    padding: 20px;
+}
+
+/* Títulos */
+h2 {
+    color: #007ba7; /* Azul cielo oscuro para los títulos */
+    margin-bottom: 20px;
+}
+
+/* Formularios */
+form {
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 123, 167, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #007ba7;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="number"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #87CEEB;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form input[type="number"]:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #005f8a; /* Azul más oscuro al enfocar */
+    outline: none;
+}
+
+form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+/* Botones */
+.btn, .slide-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 5px 10px 0;
+    background-color: #87CEEB; /* Azul cielo */
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover, .slide-btn:hover {
+    background-color: #005f8a; /* Azul más oscuro al pasar el cursor */
+}
+
+/* Botones específicos */
+.slide-btn {
+    position: relative; /* Cambiado de absolute para mejor responsividad */
+    /* Puedes ajustar la posición según tus necesidades */
+}
+
+/* Contenedor de tablas con scroll horizontal */
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1000px; /* Asegura que la tabla no colapse en pantallas pequeñas */
+}
+
+th, td {
+    border: 1px solid #87CEEB;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #87CEEB; /* Azul cielo para encabezados */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #e6f7ff; /* Azul muy claro al pasar el cursor */
+}
+
+/* Mensaje cuando no hay resultados */
+td[colspan="11"] {
+    text-align: center;
+    padding: 20px;
+    color: #555;
+}
+
+/* Formularios de Añadir y Editar */
+#add-form, form[method="POST"] {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #87CEEB;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(135, 206, 235, 0.1);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .slide-btn {
+        position: static;
+        width: 100%;
+        text-align: center;
+    }
+
+    table {
+        min-width: 600px;
+    }
+}
