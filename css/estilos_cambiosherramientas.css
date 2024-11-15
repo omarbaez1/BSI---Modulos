@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.results {
+    margin-top: 20px;
+    overflow-x: auto; /* Habilita el scroll horizontal */
+}
+
+.table-container {
+    display: block;
+    width: 100%;
+    overflow-x: auto; /* Habilitar el desplazamiento horizontal */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    table-layout: fixed; /* Las columnas tienen un ancho fijo */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+    white-space: nowrap; /* Prevenir el desbordamiento del texto */
+    overflow: hidden; /* Asegurarse de que el contenido se ajuste */
+    text-overflow: ellipsis; /* Texto largo se corta con puntos suspensivos */
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 12px; /* Ajustar el tamaño de la fuente en pantallas más pequeñas */
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
