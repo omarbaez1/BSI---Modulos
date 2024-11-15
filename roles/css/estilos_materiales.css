@@ -1,0 +1,135 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f0f0f0, #e6e6e6);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #008cba;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Botón de Añadir Nuevo Descuento centrado */
+.button-centered {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente si el contenedor tiene altura suficiente */
+    margin-top: 20px;
+}
+
+/* Estilo de botones */
+.button {
+    display: inline-block;
+    width: 220px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    background-color: #008cba;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 8px 15px rgba(0, 140, 186, 0.3);
+}
+
+.button:hover {
+    
+    background-color: #007ba7;
+    box-shadow: 0 15px 20px rgba(0, 140, 186, 0.4);
+    transform: translateY(-5px);
+}
+
+/* Formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, select {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    color: #333;
+    font-size: 1rem;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #008cba;
+}
+
+/* Botón de cerrar sesión */
+.button.is-danger {
+    background-color: #ff3860;
+}
+
+.button.is-danger:hover {
+    background-color: #ff1744;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #007ba7;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+table tr:hover {
+    background-color: #e0f7fa;
+}
+
+/* Links */
+a {
+    color: #008cba;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

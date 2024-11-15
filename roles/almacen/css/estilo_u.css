@@ -1,0 +1,365 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Color de fondo */
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1, h2 {
+    color: #007acc; /* Color principal */
+    text-shadow: 1px 1px 2px rgba(0, 122, 204, 0.5);
+}
+
+h3 {
+    color: #ffffff; /* Color principal */
+    text-shadow: 1px 1px 2px rgba(0, 122, 204, 0.5);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #005f99;
+}
+
+/* Estilos de entrada */
+input[type="text"], input[type="number"], input[type="date"], textarea, select {
+    width: 60%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #007acc;
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px rgba(0, 122, 204, 0.2);
+    font-size: 16px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="date"]:focus, textarea:focus, select:focus {
+    border-color: #005f99;
+    box-shadow: 0 0 8px rgba(0, 122, 204, 0.5);
+}
+
+/* Botón para mostrar el formulario de añadir */
+button#toggleAddForm {
+    background-color: #007acc; /* Azul específico */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+}
+
+/* Estilo para el slider */
+#nuevoRegistro {
+    display: none;
+    margin-top: 20px;
+}
+
+#toggleForm {
+    background-color: #007acc; /* Azul específico */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 10px auto;
+}
+
+button#toggleAddForm:hover {
+    background-color: #005f99; /* Azul más oscuro en hover */
+    transform: translateY(-3px);
+}
+
+button#toggleAddForm:active {
+    transform: translateY(1px);
+}
+
+/* Contenedor del formulario, inicialmente oculto */
+.form-container {
+    display: none;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Formulario visible */
+.form-container.show {
+    display: block;
+    opacity: 1;
+    max-height: 500px;
+    animation: openForm 0.5s ease-in-out;
+}
+
+/* Animación para abrir el formulario */
+@keyframes openForm {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Inputs del formulario */
+.form-container input[type="text"],
+.form-container input[type="submit"] {
+    width: 60%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #007acc;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    transition: border-color 0.3s;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+    border-color: #005f99;
+    outline: none;
+}
+
+
+
+/* Botón del formulario */
+.form-container input[type="submit"] {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #005f99;
+}
+
+.form-container input[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+/* Estilos de botón */
+input[type="submit"], .toggle-button {
+    background-color: #007acc;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 122, 204, 0.3);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+input[type="submit"]:hover, .toggle-button:hover {
+    background-color: #005f99;
+    transform: translateY(-3px);
+}
+
+input[type="submit"]:active, .toggle-button:active {
+    background-color: #004a7a;
+    transform: translateY(1px);
+}
+
+.toggle-button {
+    margin-bottom: 20px;
+}
+
+.form-container {
+    background-color: #e6f7ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 122, 204, 0.1);
+    display: none; /* Oculto por defecto */
+}
+
+/* Botón para Guardar Cambios con color azul */
+button.btn {
+    background-color: #007acc; /* Azul principal */
+    color: white;
+    padding: 12px 30px; /* Espaciado interno */
+    border: none;
+    border-radius: 30px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    transition: all 0.3s ease; /* Transiciones suaves */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra del botón */
+    margin: 10px 0; /* Margen superior e inferior */
+    display: inline-block; /* Asegura que el botón tenga dimensiones */
+}
+
+button.btn:hover {
+    background-color: #005f99; /* Azul más oscuro al pasar el ratón */
+    transform: translateY(-3px); /* Efecto de elevación */
+}
+
+button.btn:active {
+    background-color: #004a7a; /* Azul más oscuro al hacer clic */
+    transform: translateY(1px); /* Efecto de presión */
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 122, 204, 0.1);
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+table th {
+    background-color: #007acc;
+    color: white;
+    font-size: 18px;
+    position: relative;
+}
+
+table th::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    bottom: 0;
+    left: 50%;
+    transition: width 0.4s ease, left 0.4s ease;
+}
+
+table th:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+table td {
+    color: #555;
+}
+
+table tr:hover {
+    background-color: #f0f8ff;
+}
+
+/* Enlaces */
+a {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #005f99;
+}
+
+/* Botones en la tabla */
+.actions a {
+    padding: 8px 12px;
+    background-color: #007acc;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block; /* Asegura que el botón tenga dimensiones */
+}
+
+.actions a:hover {
+    background-color: #005f99;
+    transform: translateY(-3px);
+}
+
+.actions a:active {
+    background-color: #004a7a;
+    transform: translateY(1px);
+}
+
+/* Estilos para mensajes de error o éxito */
+.message {
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+.message.success {
+    background-color: #28a745;
+}
+
+.message.error {
+    background-color: #dc3545;
+}
+
+/* Estilos para la búsqueda y la tabla */
+.search-container {
+    margin-bottom: 20px;
+}
+
+.search-container input {
+    display: inline-block;
+    width: calc(80% - 20px);
+}
+
+.search-container button {
+    display: inline-block;
+    width: 18%;
+}
+/*estilo del header */
+/*.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #007acc;
+    color: white;
+    border-radius: 15px; /* Añade bordes redondeados 
+}
+
+.logo-container {
+    flex: 1;
+    text-align: left;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.title-container {
+    flex: 2;
+    text-align: center;
+}
+
+.title-container h3 {
+    margin: 0;
+}
+
+.extra-container {
+    flex: 1;
+} */
